@@ -1,8 +1,13 @@
-spec:
-  name: sample-python
-  services:
-  - environment_slug: python
-    git:
-      branch: main
-      repo_clone_url: https://github.com/supersonicgirl/sample-python.git
-    name: sample-python
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+functions:
+- github:
+    branch: master
+    deploy_on_push: true
+    repo: digitalocean/sample-functions-python-helloworld
+  name: py-api
+  routes:
+  - path: /
+  source_dir: /
+name: python-helloworld
