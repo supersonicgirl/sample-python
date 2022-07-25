@@ -10,6 +10,6 @@ def sendSignal(SIGNAL_MESSAGE):
     requests.get(base_url) 
     print(SIGNAL_MESSAGE)
 
-sendSignal('Deneme')
+sendSignal('Signal')
 
   
