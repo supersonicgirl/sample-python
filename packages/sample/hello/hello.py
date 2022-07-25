@@ -44,6 +44,7 @@ def TillsonT3():
 
     SIGNAL_MESSAGE = 'AAA'
     print(SIGNAL_MESSAGE)
+    sendSignal(SIGNAL_MESSAGE) 
 
     if (df['T3Diff'][df.index[-2]] < 0 and df['T3Diff'][df.index[-1]] > 0):
         SIGNAL_MESSAGE = 'T3 BUY SIGNAL in '+ TIME_RANGE + ' for BTC price '+ "${:,.0f}".format(df['close'][df.index[-1]])
