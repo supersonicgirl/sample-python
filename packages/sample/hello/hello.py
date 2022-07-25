@@ -57,14 +57,18 @@ def TillsonT3():
         print(SIGNAL_MESSAGE)
         
 
-       
+def main():
+      schedule.every(3).seconds.do(TillsonT3)
+      #schedule.every(15).minutes.do(TillsonT3)
 
-schedule.every(3).seconds.do(TillsonT3)
-#schedule.every(15).minutes.do(TillsonT3)
+      while 1:
+            schedule.run_pending()
+            time.sleep(1)
 
-while 1:
-    schedule.run_pending()
-    time.sleep(1)
+main()
+         
+
+
    
 
 
